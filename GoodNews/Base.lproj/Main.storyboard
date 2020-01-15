@@ -64,7 +64,7 @@
                                     <outlet property="descriptionLabel" destination="RFN-0l-mQb" id="QzB-Fs-doP"/>
                                     <outlet property="headlineImageView" destination="gUW-dN-TeR" id="dgp-hb-pEO"/>
                                     <outlet property="titleLabel" destination="2CH-nR-k0U" id="x36-ho-cnh"/>
-                                    <segue destination="N9t-06-gxx" kind="show" id="mN7-cJ-AQk"/>
+                                    <segue destination="N9t-06-gxx" kind="show" identifier="NewsDetailsViewController" id="mN7-cJ-AQk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

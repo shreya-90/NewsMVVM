@@ -35,6 +35,11 @@ class NewsHeadlinesTableViewController : UITableViewController{
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "NewsDetailsViewController" {
+            
+        }
+    }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return categoryListVM.heightForHeaderInSection(section)
     }
