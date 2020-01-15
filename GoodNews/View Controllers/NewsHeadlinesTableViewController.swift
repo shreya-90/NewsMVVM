@@ -37,8 +37,23 @@ class NewsHeadlinesTableViewController : UITableViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NewsDetailsViewController" {
-            
+            prepareSegueForNewsDetails(segue:segue)
         }
+
+    }
+    
+    private func prepareSegueForNewsDetails(segue:UIStoryboardSegue){
+        guard let newsDetailVC = segue.destination as? NewsDetailsViewController else {
+            fatalError("NewsDetailsViewController does not exist")
+        }
+        
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("Unable to get selected row")
+        }
+        
+        let articleVM =  self.categoryListVM.categoryAtIndex(index: indexPath.section).articleAtIndex(indexPath.row)
+        newsDetailVC.article = articleVM.article
+        
     }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return categoryListVM.heightForHeaderInSection(section)

@@ -18,5 +18,23 @@ class NewsDetailsViewController:UIViewController {
     
     @IBOutlet weak var webview : WKWebView!
    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
     
+    private func setupUI() {
+        self.newsDetailsVM = NewsDetailsViewModel(article)
+        
+        self.navigationItem.largeTitleDisplayMode = .never
+        self.title =  self.newsDetailsVM.article.sourceName
+        
+        guard let url = self.newsDetailsVM.url,
+            let newsDetailsURL =  URL(string: url) else {
+                return
+        }
+        
+        let request = URLRequest(url: newsDetailsURL)
+        webview.load(request)
+    }
 }
