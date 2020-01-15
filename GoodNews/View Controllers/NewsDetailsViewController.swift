@@ -13,7 +13,10 @@ import WebKit
 
 
 class NewsDetailsViewController:UIViewController {
+    var article : Article!
+    private var newsDetailsVM:NewsDetailsViewModel!
     
+    @IBOutlet weak var webview : WKWebView!
    
     
 }

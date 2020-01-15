@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="1068" y="27.436281859070466"/>
         </scene>
-        <!--View Controller-->
+        <!--News Details View Controller-->
         <scene sceneID="Ds9-n4-GHy">
             <objects>
-                <viewController id="N9t-06-gxx" sceneMemberID="viewController">
+                <viewController id="N9t-06-gxx" customClass="NewsDetailsViewController" customModule="GoodNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D1W-tg-K1p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,10 +105,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xvy-Mn-S7E"/>
                     </view>
+                    <connections>
+                        <outlet property="webview" destination="oZ5-mN-Zcs" id="Mcu-nP-32w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKb-zL-UtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="24"/>
+            <point key="canvasLocation" x="2076" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EYt-bT-WLn">
